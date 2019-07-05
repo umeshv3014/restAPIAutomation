@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.qa.base.Constants;
 import com.qa.base.TestBase;
 import com.qa.client.RestClient;
 import com.qa.data.Users;
@@ -54,7 +55,7 @@ public class DeleteApiTest extends TestBase {
 		//validate the responce
 		//Responcecode
 	    int responceCode =  closeableHttpResponse.getStatusLine().getStatusCode();
-		Assert.assertEquals(responceCode, testBase.RESPONSE_STATUS_CODE_204);
+		Assert.assertEquals(responceCode, Constants.RESPONSE_STATUS_CODE_204);
 		
 	}
 }

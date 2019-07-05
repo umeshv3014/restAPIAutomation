@@ -12,6 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.qa.base.Constants;
 import com.qa.base.TestBase;
 import com.qa.client.RestClient;
 import com.qa.util.TestUtil;
@@ -47,8 +48,8 @@ public class GetApiTest extends TestBase {
 		int statusCode = closeableHttpResponse.getStatusLine().getStatusCode();
 		System.out.println("status code " + statusCode);
 
-		Assert.assertEquals(statusCode, RESPONSE_STATUS_CODE_200,
-				"status code is not " + RESPONSE_STATUS_CODE_200);
+		Assert.assertEquals(statusCode, Constants.RESPONSE_STATUS_CODE_200,
+				"status code is not " + Constants.RESPONSE_STATUS_CODE_200);
 
 		// JSON String
 		String responceString = EntityUtils.toString(
@@ -141,8 +142,8 @@ public class GetApiTest extends TestBase {
 		int statusCode = closeableHttpResponse.getStatusLine().getStatusCode();
 		System.out.println("status code " + statusCode);
 
-		Assert.assertEquals(statusCode, RESPONSE_STATUS_CODE_200,
-				"status code is not " + RESPONSE_STATUS_CODE_200);
+		Assert.assertEquals(statusCode, Constants.RESPONSE_STATUS_CODE_200,
+				"status code is not " + Constants.RESPONSE_STATUS_CODE_200);
 
 		// JSON String
 		String responceString = EntityUtils.toString(

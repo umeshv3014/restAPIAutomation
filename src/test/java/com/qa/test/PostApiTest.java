@@ -3,7 +3,6 @@ package com.qa.test;
 import java.io.IOException;
 import java.util.HashMap;
 
-
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;
@@ -15,6 +14,7 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.qa.base.Constants;
 import com.qa.base.TestBase;
 import com.qa.client.RestClient;
 import com.qa.data.Users;
@@ -61,7 +61,7 @@ public class PostApiTest extends TestBase {
 		//validate the responce
 		//Responcecode
 	   int responceCode =  closeableHttpResponse.getStatusLine().getStatusCode();
-		Assert.assertEquals(responceCode, testBase.RESPONSE_STATUS_CODE_201);
+		Assert.assertEquals(responceCode, Constants.RESPONSE_STATUS_CODE_201);
 		
 		//2. JsonString
 		String responceString = EntityUtils.toString(closeableHttpResponse.getEntity(), "UTF-8");
